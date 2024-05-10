@@ -10,6 +10,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Справочник сотрудников.
+ *
+ */
 @Entity
 @Table(name = "employees")
 @NoArgsConstructor
