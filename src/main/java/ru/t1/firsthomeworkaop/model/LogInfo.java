@@ -12,32 +12,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-/**
- * Справочник сотрудников.
- *
- */
 @Entity
-@Table(name = "employees")
+@Table(name = "loginfo")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @ToString
-public class Employee {
+public class LogInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Integer id;
+    private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "name_method")
+    private String nameMethod;
 
-    @Column(name = "surname")
-    private String surname;
-
-    @Column(name = "department")
-    private String department;
-
-    @Column(name = "salary")
-    private int salary;
+    @Column(name = "duration")
+    private Long duration;
 }
