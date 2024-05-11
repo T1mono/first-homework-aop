@@ -10,6 +10,9 @@ import org.springframework.stereotype.Component;
 import ru.t1.firsthomeworkaop.model.LogInfo;
 import ru.t1.firsthomeworkaop.repository.LogInfoRepository;
 
+/**
+ * Аспект для синхронной работы метода.
+ */
 @Aspect
 @Component
 @Slf4j

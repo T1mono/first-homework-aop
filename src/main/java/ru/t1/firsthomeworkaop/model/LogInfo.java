@@ -12,6 +12,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Справочник учёта времени выполнения методов.
+ * Представление записи справочника my_db.loginfo.
+ */
 @Entity
 @Table(name = "loginfo")
 @NoArgsConstructor

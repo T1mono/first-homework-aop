@@ -14,7 +14,7 @@ import lombok.ToString;
 
 /**
  * Справочник сотрудников.
- *
+ * Представление записи справочника my_db.employees в базе данных.
  */
 @Entity
 @Table(name = "employees")

@@ -8,5 +8,4 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ComponentScan("ru.t1.firsthomeworkaop")
 @EnableAspectJAutoProxy
 public class AspectJConfig {
-
 }

@@ -10,6 +10,9 @@ import ru.t1.firsthomeworkaop.repository.EmployeeRepository;
 
 import java.util.List;
 
+/**
+ * Класс для работы со справочником my_db.employees.
+ */
 @Service
 @RequiredArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService {
@@ -30,7 +33,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         employee.setSurname(employeeRequestDto.getSurname());
         employee.setDepartment(employeeRequestDto.getDepartment());
         employee.setSalary(employeeRequestDto.getSalary());
-
         return employeeRepository.save(employee);
     }
 }

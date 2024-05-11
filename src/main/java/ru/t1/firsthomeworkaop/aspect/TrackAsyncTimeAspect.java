@@ -6,13 +6,15 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 import ru.t1.firsthomeworkaop.model.LogInfo;
 import ru.t1.firsthomeworkaop.repository.LogInfoRepository;
 
 import java.util.concurrent.CompletableFuture;
 
+/**
+ * Аспект для асинхронной работы метода.
+ */
 @Component
 @Aspect
 @Slf4j
@@ -27,14 +29,10 @@ public class TrackAsyncTimeAspect {
     @Around(value = "trackAsyncTimePointcut()")
     public Object trackAsyncRunner(ProceedingJoinPoint proceedingJoinPoint) {
         LogInfo logInfo = new LogInfo();
-
         String methodName = proceedingJoinPoint.getSignature().getName();
         Object[] methodArgs = proceedingJoinPoint.getArgs();
-
         long startTime = System.currentTimeMillis();
-
         log.info("Выполнение метода {} с аргументами {}", methodName, methodArgs);
-
         return CompletableFuture.runAsync(() -> {
             try {
                 log.info("Асинхронный запуск в trackAsyncRunner");
