@@ -31,6 +31,7 @@ chrome.exe --user-data-dir="C://chrome-dev-disabled-security" --disable-web-secu
 
 ## Скрпиты для создания таблиц в БД
 
+```
 CREATE TABLE if not exists employees
 (
 id         bigint NOT NULL AUTO_INCREMENT,
@@ -40,7 +41,9 @@ department varchar(20),
 salary     int,
 PRIMARY KEY (id)
 );
+```
 
+```
 CREATE TABLE if not exists loginfo
 (
 id          bigint NOT NULL AUTO_INCREMENT,
@@ -48,3 +51,4 @@ name_method varchar(100),
 duration    bigint,
 PRIMARY KEY (id)
 );
+```
