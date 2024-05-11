@@ -24,13 +24,23 @@ import lombok.ToString;
 @Setter
 @ToString
 public class LogInfo {
+
+    /**
+     * ID метода.
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    /**
+     * Имя метода.
+     */
     @Column(name = "name_method")
     private String nameMethod;
 
+    /**
+     * Длительно выполгнения метода в миллисекунда.
+     */
     @Column(name = "duration")
     private Long duration;
 }
