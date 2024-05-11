@@ -39,7 +39,7 @@ public class LogInfo {
     private String nameMethod;
 
     /**
-     * Длительно выполгнения метода в миллисекунда.
+     * Длительно выполнения метода в миллисекунда.
      */
     @Column(name = "duration")
     private Long duration;
